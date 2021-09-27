@@ -1,11 +1,10 @@
-const { sum, logPerson, sayHello, greetings, countSheep, pigLatinTranslator, animal, allTrees, inOrder, introduction } = require('./exercises001');
+const { sum, logPerson, sayHello, greetings, countSheep, pigLatinTranslator, animal, allTrees, introduction, checkElementExists } = require('./exercises001');
 
 describe("sum", () => {
     test('adds 1 + 2 to equal 3', () => {
         expect(sum(1, 2)).toBe(3);
     });
 });
-
 
 describe("logPerson", () => {
 
@@ -27,18 +26,6 @@ describe("sayHello", () => {
     test('returns "Hello" + the name if name is defined"', () => {
         expect(sayHello(name)).toBe("Hello Kim");
     });
-});
-
-describe("greetings", () => {
-
-    test('returns greeting plus subject concatenated with an exclamation mark', () => {
-        expect(greetings("Hello", "World")).toBe("Hello World!");
-    });
-
-    test('returns greeting plus subject concatenated with an exclamation mark', () => {
-        expect(greetings("Greetings", "Earthling")).toBe("Greetings Earthling!");
-    });
-
 });
 
 describe("greetings", () => {
@@ -79,7 +66,6 @@ describe('pigLatinTranslator', () => {
 });
 
 describe('animal', () => {
-
     test('returns information about the animal', () => {
 
         expect(animal({ name: "dog", legs: 4, color: "white" })).toBe("This white dog has 4 legs.");
@@ -91,6 +77,15 @@ describe('animal', () => {
 
     test('leaves punctuation marks untouched', () => {
         expect(animal({ name: "whale", legs: 0, color: "blue" })).toBe("This blue whale has 0 legs.");
+    });
+});
+
+describe('checkElementExists', () => {
+    test('returns true if an element exists in an array', () => {
+        expect(checkElementExists("needle", ["hay", "hay", "haaaaay", "needle"])).toBe(true);
+    });
+    test('returns false if an element does not exist in an array', () => {
+        expect(checkElementExists("needle", ["nothing", "but", "hay!"])).toBe(false);
     });
 });
 
@@ -109,14 +104,6 @@ describe('allTrees', () => {
     });
 });
 
-// describe('inOrder', () => {
-
-//     test('returns elements in order', () => {
-//         expect(inOrder(['first', 'second', 'third'])).toBe('first second third');
-//     });
-// });
-
-
 describe('introduction', () => {
 
     const person = {
@@ -125,7 +112,7 @@ describe('introduction', () => {
         pet: 'Eddie'
     }
 
-    test('returns an introduction with information about person', () => {
+    test('returns an introduction with information about a person', () => {
         expect(introduction(person)).toBe('Hello my name is Heather, and I live in Manchester with Eddie');
     });
 });

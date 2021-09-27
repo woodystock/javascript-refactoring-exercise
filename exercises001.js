@@ -8,7 +8,6 @@ function logPerson(people) {
     }
 }
 
-
 function sayHello(name) {
     if (name === undefined) {
         return "Hello you!";
@@ -17,12 +16,10 @@ function sayHello(name) {
     }
 }
 
-
 function greetings(greeting, subject) {
 
     return greeting + ' ' + subject + "!";
 }
-
 
 function countSheep(sheep) {
 
@@ -68,10 +65,13 @@ function animal(obj) {
 
     var legs = obj.legs;
 
-    return "This " + colour + " " + name + " has " + legs + " legs."
+    return "This " + colour + " " + name + " has " + legs + " legs.";
 
 }
 
+function checkElementExists(needle, haystack) {
+    return haystack.indexOf(needle) !== -1;
+}
 
 function allTrees() {
 
@@ -84,31 +84,16 @@ function allTrees() {
     return trees;
 }
 
-function inOrder(order) {
+function introduction(person) {
 
-    var first = order[0];
-    var second = order[1];
-    var third = order[2];
+    var name = person.name;
+    var city = person.city;
+    var pet = person.pet;
 
-    return (first + " " + second + " " + third);
-
+    return 'Hello my name is ' + name + ', ' 
+    + 'and I live in ' + city + ' with ' + pet;
 }
 
 
-const introduction = (person) => `Hello my name is ${person.name}, and I live in ${person.city} with ${person.pet}`;
 
-// function introduction(person) {
-
-//     var name = person.name;
-//     var city = person.city;
-//     var pet = person.pet;
-
-//     return 'Hello my name is ' + name + ', '
-//         + 'and I live in ' + city + ' with ' + pet;
-// }
-
-
-
-
-
-module.exports = { sum, logPerson, sayHello, greetings, countSheep, pigLatinTranslator, animal, allTrees, inOrder, introduction };
+module.exports = { sum, logPerson, sayHello, greetings, countSheep, pigLatinTranslator, animal, allTrees, introduction, checkElementExists };
