@@ -17,7 +17,6 @@ function sayHello(name) {
 }
 
 function greetings(greeting, subject) {
-
     return greeting + ' ' + subject + "!";
 }
 
@@ -44,7 +43,6 @@ function pigLatinTranslator(str) {
     var strSplit = str.split(' ');
 
     for (let i = 0; i < strSplit.length; i++) {
-
         if (strSplit[i].charCodeAt() < 65 || strSplit[i].toUpperCase().charCodeAt() > 90) {
             pigLatin.push(strSplit[i])
         }
