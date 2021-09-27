@@ -1,4 +1,4 @@
-const { sum, logPerson, sayHello, greetings, countSheep, pigLatinTranslator, animal, allTrees, introduction, checkElementExists } = require('./exercises001');
+const { sum, logPerson, sayHello, greetings, countSheep, pigLatinTranslator, animal, allTrees, introduction, checkElementExists, favouriteFoods } = require('./exercises001');
 
 describe("sum", () => {
     test('adds 1 + 2 to equal 3', () => {
@@ -114,5 +114,12 @@ describe('introduction', () => {
 
     test('returns an introduction with information about a person', () => {
         expect(introduction(person)).toBe('Hello my name is Heather, and I live in Manchester with Eddie');
+    });
+});
+
+
+describe('favouriteFoods', () => {
+    test('returns a string with some favourite foods', () => {
+        expect(favouriteFoods()).toBe(`My favourite foods are 🍕, 🥓 and 🍟 - yuummmy!`);
     });
 });

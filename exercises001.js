@@ -95,5 +95,19 @@ function introduction(person) {
 }
 
 
+function favouriteFoods() {
+    
+    var foods = ['🍕', '🥓', '🍟']
 
-module.exports = { sum, logPerson, sayHello, greetings, countSheep, pigLatinTranslator, animal, allTrees, introduction, checkElementExists };
+    var pizza = foods[0];
+
+    var veganBacon = foods[1];
+
+    var fries = foods[2];
+
+    return `My favourite foods are ${pizza}, ${veganBacon} and ${fries} - yuummmy!`
+}
+
+
+
+module.exports = { sum, logPerson, sayHello, greetings, countSheep, pigLatinTranslator, animal, allTrees, introduction, checkElementExists, favouriteFoods };
