@@ -60,9 +60,7 @@ function pigLatinTranslator(str) {
 function animal(obj) {
 
     var colour = obj.color;
-
     var name = obj.name;
-
     var legs = obj.legs;
 
     return "This " + colour + " " + name + " has " + legs + " legs.";
@@ -76,7 +74,6 @@ function checkElementExists(needle, haystack) {
 function allTrees() {
 
     var trees = ['Birch', 'Oak', 'Pink Perfection'];
-
     var moreTrees = ['Apple', 'Lemon', 'Eucalyptus', 'Guava'];
 
     Array.prototype.push.apply(trees, moreTrees);
@@ -98,16 +95,29 @@ function introduction(person) {
 function favouriteFoods() {
     
     var foods = ['🍕', '🥓', '🍟']
-
     var pizza = foods[0];
-
     var veganBacon = foods[1];
-
     var fries = foods[2];
 
     return `My favourite foods are ${pizza}, ${veganBacon} and ${fries} - yuummmy!`
 }
 
 
+function favFoodObjects() {
 
-module.exports = { sum, logPerson, sayHello, greetings, countSheep, pigLatinTranslator, animal, allTrees, introduction, checkElementExists, favouriteFoods };
+    var foodItems = {
+        banana: "🍌",
+        apple: "🍎",
+        pear: "🍐"
+    }
+
+    var banana = foodItems.banana;
+    var apple = foodItems.apple;
+    var pear = foodItems.pear;
+
+
+    return `In my fruit salad I like ${banana}s, ${apple}s and ${pear}s`
+}
+
+
+module.exports = { sum, logPerson, sayHello, greetings, countSheep, pigLatinTranslator, animal, allTrees, introduction, checkElementExists, favouriteFoods, favFoodObjects };
