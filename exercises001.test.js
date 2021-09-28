@@ -7,7 +7,6 @@ describe("sum", () => {
 });
 
 describe("logPerson", () => {
-
     const people = ["Heather", "Barry", "John", "Maria"];
 
     test('returns a list of people', () => {
@@ -16,7 +15,6 @@ describe("logPerson", () => {
 });
 
 describe("sayHello", () => {
-
     test('returns "Hello you!" if name is undefined"', () => {
         expect(sayHello()).toBe("Hello you!");
     });
@@ -29,7 +27,6 @@ describe("sayHello", () => {
 });
 
 describe("greetings", () => {
-
     test('returns greeting plus subject concatenated with an exclamation mark', () => {
         expect(greetings("Hello", "World")).toBe("Hello World!");
     });
@@ -55,7 +52,6 @@ describe('countSheep', () => {
 });
 
 describe('pigLatinTranslator', () => {
-
     test('moves the first letter of each word to the end of it, and adds "ay" to the end of the word', () => {
         expect(pigLatinTranslator('Pig latin is cool')).toBe('igPay atinlay siay oolcay');
     });
@@ -90,7 +86,6 @@ describe('checkElementExists', () => {
 });
 
 describe('allTrees', () => {
-
     test('returns all trees in one array', () => {
         expect(allTrees()).toEqual([
             'Birch',
@@ -101,19 +96,6 @@ describe('allTrees', () => {
             'Eucalyptus',
             'Guava'
         ]);
-    });
-});
-
-describe('introduction', () => {
-
-    const person = {
-        name: 'Heather',
-        city: 'Manchester',
-        pet: 'Eddie'
-    }
-
-    test('returns an introduction with information about a person', () => {
-        expect(introduction(person)).toBe('Hello my name is Heather, and I live in Manchester with Eddie');
     });
 });
 

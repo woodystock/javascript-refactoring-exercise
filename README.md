@@ -10,6 +10,7 @@ Have a go at refactoring the code solutions in exercises001 using what you have 
 
 Make sure you don't break anything so keep running those tests and comitting to GitHub regularly!
 
+````npm i```
 ````npm test````
 
 Happy coding! 🙌

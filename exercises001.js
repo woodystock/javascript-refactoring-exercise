@@ -1,14 +1,17 @@
 function sum(a, b) {
+
     return a + b;
 }
 
 function logPerson(people) {
+
     for (var i = 0; i < people.length; i++) {
         return people[i];
     }
 }
 
 function sayHello(name) {
+
     if (name === undefined) {
         return "Hello you!";
     } else {
@@ -17,12 +20,13 @@ function sayHello(name) {
 }
 
 function greetings(greeting, subject) {
+
     return greeting + ' ' + subject + "!";
 }
 
 function countSheep(sheep) {
 
-    let count = 0;
+    var count = 0;
 
     for (let i = 0; i < sheep.length; i++) {
         if (sheep[i] === 'sheep') {
@@ -66,6 +70,7 @@ function animal(obj) {
 }
 
 function checkElementExists(needle, haystack) {
+
     return haystack.indexOf(needle) !== -1;
 }
 
@@ -77,16 +82,6 @@ function allTrees() {
     Array.prototype.push.apply(trees, moreTrees);
 
     return trees;
-}
-
-function introduction(person) {
-
-    var name = person.name;
-    var city = person.city;
-    var pet = person.pet;
-
-    return 'Hello my name is ' + name + ', ' 
-    + 'and I live in ' + city + ' with ' + pet;
 }
 
 
