@@ -1,4 +1,4 @@
-const { sum, logPerson, sayHello, greetings, countSheep, pigLatinTranslator, animal, allTrees, introduction, checkElementExists, favouriteFoods, favFoodObjects } = require('./exercises001');
+const { sum, logPerson, sayHello, greetings, countSheep, pigLatinTranslator, animal, allTrees, checkElementExists, favouriteFoods, favFoodObjects, getDirector } = require('./exercises001');
 
 describe("sum", () => {
     test('adds 1 + 2 to equal 3', () => {
@@ -25,6 +25,30 @@ describe("sayHello", () => {
         expect(sayHello(name)).toBe("Hello Kim");
     });
 });
+
+
+describe("getDirector", () => {
+    test('returns the directors name if director property is defined', () => {
+
+        const movieFull = {
+            title: 'Blade Runner',
+            director: { name: 'Ridley Scott' },
+            actors: [{ name: 'Harrison Ford' }, { name: 'Rutger Hauer' }]
+        };
+        expect(getDirector(movieFull)).toBe('Ridley Scott');
+    });
+
+    test('returns undefined if a directors name is not provided', () => {
+
+        const movieSmall = {
+            title: 'Cloudy with a Chance of Meatballs'
+        };
+        expect(getDirector(movieSmall)).toBe(undefined);
+    });
+
+
+});
+
 
 describe("greetings", () => {
     test('returns greeting plus subject concatenated with an exclamation mark', () => {

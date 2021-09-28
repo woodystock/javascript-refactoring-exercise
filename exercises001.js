@@ -19,6 +19,13 @@ function sayHello(name) {
     }
 }
 
+function getDirector(movie) {
+    
+    if (movie.director != null) {
+        return movie.director.name;
+    }
+}
+
 function greetings(greeting, subject) {
 
     return greeting + ' ' + subject + "!";
@@ -86,7 +93,7 @@ function allTrees() {
 
 
 function favouriteFoods() {
-    
+
     var foods = ['🍕', '🥓', '🍟']
     var pizza = foods[0];
     var veganBacon = foods[1];
@@ -113,4 +120,4 @@ function favFoodObjects() {
 }
 
 
-module.exports = { sum, logPerson, sayHello, greetings, countSheep, pigLatinTranslator, animal, allTrees, introduction, checkElementExists, favouriteFoods, favFoodObjects };
+module.exports = { sum, logPerson, sayHello, getDirector, greetings, countSheep, pigLatinTranslator, animal, allTrees, checkElementExists, favouriteFoods, favFoodObjects };
