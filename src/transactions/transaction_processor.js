@@ -1,4 +1,4 @@
-function processTransactions(transActions) {
+const processTransactions = (transactions) => {
 
     if (!Array.isArray(transactions) || transactions.includes(undefined)) {
         throw new Error("Undefined collection of transactions")
