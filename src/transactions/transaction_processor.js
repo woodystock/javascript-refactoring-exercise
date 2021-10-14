@@ -4,7 +4,7 @@ function processTransactions(transActions) {
 
     txr = [];
 
-    if(!validateTransactions(transActions)) {
+    if (!Array.isArray(transactions) || transactions.includes(undefined)) {
         throw new Error("Undefined collection of transactions")
     }
 
@@ -38,15 +38,6 @@ function sortByAmountThenName(txCount) {
     }
 
     return sortedResults;
-}
-
-
-function validateTransactions(transactions) {
-    if(transactions === undefined) {
-        return false;
-    } 
-
-    return true;
 }
 
 module.exports = processTransactions;
