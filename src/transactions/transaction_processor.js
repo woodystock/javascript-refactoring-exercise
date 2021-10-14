@@ -8,16 +8,11 @@ function processTransactions(transActions) {
         throw new Error("Undefined collection of transactions")
     }
 
-    let txCount = {}
+    const Count = {};
+      for (let j of transactions) 
+        Count[j] ? (Count[j] += 1) : (Count[j] = 1); // frequency of each item
 
-    const numberOfTransactions = transActions.length;
-
-    for(var i = 0; i < numberOfTransactions; i++) {
-        const transaction = transActions[i];
-        txCount[transaction] ? txCount[transaction] += 1 : txCount[transaction] = 1;
-    }
-
-    txCount = sortByAmountThenName(txCount);
+    Count = sortByAmountThenName(Count);
     
     // Place them back in array for returning
     Object.keys(txCount).forEach(function (key, index) {
