@@ -12,7 +12,9 @@ function processTransactions(transActions) {
       for (let j of transactions) 
         Count[j] ? (Count[j] += 1) : (Count[j] = 1); // frequency of each item
 
-    Count = sortByAmountThenName(Count);
+    const SortbyNumber = Object.entries(Count); // Object [item, frequency]
+    ​
+    SortbyNumber.sort((a, b) => b[1] - a[1] || -(a[0] < b[0])); // Sort based on frequency
     
     // Place them back in array for returning
     Object.keys(txCount).forEach(function (key, index) {
@@ -20,19 +22,6 @@ function processTransactions(transActions) {
     });
 
     return txr;
-}
-
-function sortByAmountThenName(txCount) {
-    let sortedKeys = Object.keys(txCount).sort(function sortingFunction(itemOne, itemTwo) {
-        return  txCount[itemTwo] - txCount[itemOne] || itemOne > itemTwo || -(itemOne < itemTwo)}
-    );
-
-    let sortedResults = {};
-    for(let objectKey of sortedKeys) {
-        sortedResults[objectKey] = txCount[objectKey];
-    }
-
-    return sortedResults;
 }
 
 module.exports = processTransactions;
