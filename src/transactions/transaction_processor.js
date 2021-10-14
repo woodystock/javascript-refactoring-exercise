@@ -1,8 +1,4 @@
-var txr = [];
-
 function processTransactions(transActions) {
-
-    txr = [];
 
     if (!Array.isArray(transactions) || transactions.includes(undefined)) {
         throw new Error("Undefined collection of transactions")
@@ -16,12 +12,7 @@ function processTransactions(transActions) {
     ​
     SortbyNumber.sort((a, b) => b[1] - a[1] || -(a[0] < b[0])); // Sort based on frequency
     
-    // Place them back in array for returning
-    Object.keys(txCount).forEach(function (key, index) {
-        txr[index] = `${key} ${txCount[key]}`;
-    });
-
-    return txr;
+    return SortbyNumber.map((Element) => Element.join(" ")); // Map into a single array
 }
 
 module.exports = processTransactions;
